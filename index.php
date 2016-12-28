@@ -7,13 +7,15 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 // Make a POST Request to Messaging API to reply to sender
+// Get replyToken
+			$replyToken = $event['replyToken'];
 $messages = [
 				'type' => 'text',
 				'text' => 'ทำไมต้องกวนฉันด้วย+++++++++++++++'
 			];                        
 $url = 'https://api.line.me/v2/bot/message/reply';
                         $data = [
-                                'replyToken' => ,$access_token
+                                'replyToken' => ,$replyToken
                                 'messages' => [$messages],
                         ];
                         $post = json_encode($data);
