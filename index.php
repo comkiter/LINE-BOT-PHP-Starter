@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<?
-echo "Helllo World TEST";
-=======
-
 <?php
 $access_token = 'w8Km+wvo6CWbnJ6Bk2T0A2w4N9SbhctqJJQXzoJo9RCNQcbPvcqsT3vmzafvPJzAlL5ZcoOYriQXu/ce4XWGK9Lj/yVqO3BRGY/cCH6YrRhsWgyZZH08XnB0u94OX2tIngYxglm0jI8TVp8IcqRJwQdB04t89/1O/w1cDnyilFU=';
 
@@ -78,4 +73,3 @@ if (!is_null($events['events'])) {
 }
 */
 echo "OK";
->>>>>>> origin/master
