@@ -10,8 +10,7 @@ $events = json_decode($content, true);
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
-		$replyToken = $event['replyToken'];
-		/*
+		
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
@@ -21,8 +20,14 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			$messages = [
+				{
 				'type' => 'text',
 				'text' => 'ทำไมต้องกวนฉันด้วย'
+				},
+				{
+				'type' => 'text',
+				'text' => 'ไม่ตอบแล้ว+++'
+				}
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
@@ -44,7 +49,7 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
-		}*/
+		}
 	}
 }
 echo $replyToken;
