@@ -3,7 +3,7 @@ $access_token = 'w8Km+wvo6CWbnJ6Bk2T0A2w4N9SbhctqJJQXzoJo9RCNQcbPvcqsT3vmzafvPJz
 
 // Get POST body content
 $content = file_get_contents('php://input');
-// Parse JSON
+*// Parse JSON
 $events = json_decode($content, true);
 
 // Validate parsed JSON data
@@ -15,7 +15,9 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => 'ทำไมต้องกวนฉันด้วย'
+				'text' => 'ทำไมต้องกวนฉันด้วย',
+				'type' => 'text',
+				'text' => 'ฉันเริ่มเบื่อแล้ว'
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
@@ -37,6 +39,7 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
+		/*
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
@@ -69,7 +72,7 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
-		}
+		}*/
 	}
 }
 echo "OK";
