@@ -6,8 +6,10 @@ $access_token = 'w8Km+wvo6CWbnJ6Bk2T0A2w4N9SbhctqJJQXzoJo9RCNQcbPvcqsT3vmzafvPJz
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
+echo $events;
 // Make a POST Request to Messaging API to reply to sender
 // Get replyToken
+/*
 			$replyToken = $event['replyToken'];
 $messages = [
 				'type' => 'text',
@@ -29,6 +31,7 @@ $url = 'https://api.line.me/v2/bot/message/reply';
                         $result = curl_exec($ch);
                         curl_close($ch);
                         echo $result . "\r\n";
+*/
 /*
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
