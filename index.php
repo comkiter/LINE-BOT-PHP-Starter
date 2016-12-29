@@ -52,5 +52,4 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo $replyToken;
 echo "OK";
